@@ -7,11 +7,12 @@
 ![Gif](https://img.itch.zone/aW1nLzY3OTQ1NDEuZ2lm/original/F%2FxaEn.gif)
 
 Rules:
-*Use only [Kenny](https://kenney.nl/) assets
 
-*Make game between August 20th 2021 at 8:00 AM to August 22nd 2021 at 8:00 AM
+* Use only [Kenny](https://kenney.nl/) assets
 
-*Theme is Rotation
+* Make game between August 20th 2021 at 8:00 AM to August 22nd 2021 at 8:00 AM
+
+* Theme is Rotation
 
 
 The characters are built using the Modular Character and Animal Pack Redux 
