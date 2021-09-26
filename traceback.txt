@@ -1,38 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 190, in script
-    python:
-  File "renpy/common/00start.rpy", line 191, in <module>
-    renpy.execute_default_statement(True)
-  File "game/script.rpy", line 19, in set_default
-    default lupDate = false
-  File "game/script.rpy", line 19, in <module>
-    default lupDate = false
-NameError: name 'false' is not defined
+  File "game/script.rpy", line 28, in script
+    show coordwave wtih dissolve
+Exception: Image 'coordwave' does not accept attributes 'wtih dissolve'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 190, in script
-    python:
-  File "renpy/ast.py", line 923, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "renpy/python.py", line 2235, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 191, in <module>
-    renpy.execute_default_statement(True)
-  File "renpy/exports.py", line 3749, in execute_default_statement
-    i.set_default(start)
-  File "game/script.rpy", line 19, in set_default
-    default lupDate = false
-  File "renpy/python.py", line 2259, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
-    default lupDate = false
-NameError: name 'false' is not defined
+  File "game/script.rpy", line 28, in script
+    show coordwave wtih dissolve
+  File "D:\Renpy\renpy-7.4.8-sdk/renpy/ast.py", line 1192, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "D:\Renpy\renpy-7.4.8-sdk/renpy/ast.py", line 1162, in show_imspec
+    atl=atl)
+  File "D:\Renpy\renpy-7.4.8-sdk/renpy/exports.py", line 744, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "D:\Renpy\renpy-7.4.8-sdk/renpy/display/image.py", line 409, in find_target
+    self.target = target._duplicate(a)
+  File "D:\Renpy\renpy-7.4.8-sdk/renpy/display/core.py", line 390, in _duplicate
+    args.extraneous()
+  File "D:\Renpy\renpy-7.4.8-sdk/renpy/display/core.py", line 271, in extraneous
+    " ".join(self.args),
+Exception: Image 'coordwave' does not accept attributes 'wtih dissolve'.
 
-Windows-7-6.1.7601-SP1
+Windows-10-10.0.19041
 Ren'Py 7.4.8.1895
 AnimalSpeedDating 1.0
-Sat Aug 21 20:11:06 2021
+Mon Sep 20 13:09:38 2021

@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 175: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
-    if dates == 0:
-    ^
+File "game/script.rpy", line 28: expected '=' not found.
+    image coord wave show:
+                     ^
+
+File "game/script.rpy", line 45: end of line expected.
+    show coord wave show
+                    ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Sat Aug 21 20:25:10 2021
+Sun Sep 26 10:14:07 2021

@@ -1,21 +1,11 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define pov = Character("[povname]")
+﻿define pov = Character("[povname]")
 default povname = "Bababooie"
-
 define c = Character("Coordinator")
-
 define l = Character("Lup")
-
 define a = Character ("Alle")
-
 define p = Character ("Paca")
 
 default dates = 0
-
 default lupDate = 0
 default alleDate = 0
 default pacaDate = 0
@@ -23,9 +13,11 @@ default pacaDate = 0
 label start:
 
     scene bg club
+    with fade
     play music "BlippyTrance.mp3"
 
     show coord wave
+    with dissolve
 
     c "Ah, you must be our last guest for this afternoon's speed date!"
 
@@ -36,8 +28,6 @@ label start:
      $povname = "Bababooie"
 
      pov "My name is [povname]!"
-
-    # These display lines of dialogue.
 
     hide coord wave
 
@@ -77,17 +67,14 @@ label start:
     pov "{i}The other prospective dates look up and offer me various little waves in greeting."
 
     show lup normal at left
-    #
 
     pov "{i}A tall and outgoing grey wolf."
 
     show alle normal
-    #
 
     pov "{i}An even taller moose who has a shy smile."
 
     show paca normal at right
-    #
 
     pov "{i}And very buff elephant who gives me a confident and pleasant smile."
 
@@ -96,13 +83,11 @@ label start:
     hide paca normal
     with fade
     show coord wave
-    #
 
     c "Alright, please choose your first conversation partner!"
 
     hide coord normal
     hide coord wave
-    #
 
     label convo_round1:
 
@@ -123,7 +108,6 @@ label start:
     hide coord normal
     hide coord wave
     show lup normal
-    #
 
     l "Whoa! Nice!"
 
@@ -162,7 +146,6 @@ label start:
 
     hide lup heh
     show coord wave
-    #
 
     if dates == 3:
         jump ending
@@ -203,8 +186,6 @@ label start:
     label alle_convo1:
         hide coord wave
         show alle normal
-        #
-
 
     a "Oh jeez... Sorry, I'm super nervous."
     a "I'm Alle.  I'm a counselor.  Like a therapist, not a school counselor."
@@ -261,7 +242,6 @@ label start:
 
     hide alle blush
     show coord wave
-    #
 
     if dates == 3:
         jump ending
@@ -301,7 +281,6 @@ label start:
 
     hide coord wave
     show paca normal
-    #
 
     pov "{i}The elephant stands to greet me, shaking my hand firmly but earnestly."
 
@@ -376,7 +355,6 @@ label start:
 
     hide paca huh
     hide paca normal
-    #
 
     pov "{i}The timer on the table goes off.  Its time to switch partners."
 
@@ -387,7 +365,6 @@ label start:
 
     hide paca huh
     hide paca normal
-    #
 
     $ pacaDate = 1
 
@@ -418,7 +395,6 @@ label start:
     label ending:
         hide coord wave
         hide coord normal
-        #
 
         pov "And that was everyone."
         pov "Now the awkward part. =_="
@@ -431,7 +407,6 @@ label start:
 
         hide coord normal
         hide coord wave
-        #
 
         menu:
             "Lup.  They're energy is too cute.":
@@ -444,38 +419,32 @@ label start:
     label lup_ending:
 
         show lup heh
-        #
 
         l "Wow!  I'm excited!  I though you seemed pretty fun too!"
         l "Where do you wanna go first!??"
 
         hide lup heh
-        #
 
         jump thank_you
 
     label alle_ending:
         show alle blush
-        #
 
         a "T-Thanks!  I was so nervous coming here but I'm glad I did!"
         a "Should w-we... go get something to eat?"
 
         hide alle blush
-        #
 
         jump thank_you
 
     label paca_ending:
         show paca normal
-        #
 
         p "Wow, I'm actually really surprised!  And flattered!"
         p "Most people are really put off by my work demands."
         p "But I hope we get to be good friends"
 
         hide paca normal
-        #
 
     jump thank_you
 
@@ -487,4 +456,3 @@ label start:
     pause 2.0
 
     return
-    # This ends the game.
